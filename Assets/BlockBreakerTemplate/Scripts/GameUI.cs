@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
+using UnityEngine.SceneManagement;
+
 public class GameUI : MonoBehaviour 
 {
 	public GameManager manager;		//The GameManager
@@ -28,27 +30,27 @@ public class GameUI : MonoBehaviour
 	//Called when the game is over
 	public void SetGameOver ()
 	{
-		gameOverScreen.active = true;
+		gameOverScreen.SetActive(true);
 		gameOverScoreText.text = "<b>YOU ACHIEVED A SCORE OF</b>\n" + manager.score;	//Sets the gameOverScoreText to display the words 'YOU ACHIEVED A SCORE OF' in bold and then the score value on a new line which is located in the GameManager class
 	}
 
 	//Called when the game has been won
 	public void SetWin ()
 	{
-		winScreen.active = true;
+		winScreen.SetActive(true);
 	}
 
 	//Called when the 'TRY AGAIN' button is pressed
 	public void TryAgainButton ()
 	{
-		gameOverScreen.active = false;
-		winScreen.active = false;
+		gameOverScreen.SetActive(false);
+		winScreen.SetActive(false);
 		manager.StartGame();
 	}
 
 	//Called when the 'MENU' button is pressed
 	public void MenuButton ()
 	{
-		Application.LoadLevel(0);	//Loads the 'Menu' scene
+		SceneManager.LoadScene(0);  //Loads the 'Menu' scene
 	}
 }

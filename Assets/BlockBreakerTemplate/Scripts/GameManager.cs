@@ -36,8 +36,8 @@ public class GameManager : MonoBehaviour
 		lives = 3;
 		gameOver = false;
 		wonGame = false;
-		paddle.active = true;
-		ball.active = true;
+		paddle.SetActive(true);
+		ball.SetActive(true);
 		paddle.GetComponent<Paddle>().ResetPaddle();
 		CreateBrickArray();
 	}
@@ -69,8 +69,8 @@ public class GameManager : MonoBehaviour
 	public void WinGame ()
 	{
 		wonGame = true;
-		paddle.active = false;			//Disables the paddle so it's invisible
-		ball.active = false;			//Disables the ball so it's invisible
+		paddle.SetActive(false);            //Disables the paddle so it's invisible
+		ball.SetActive(false);          //Disables the ball so it's invisible
 		gameUI.SetWin();				//Set the game over UI screen
 	}
 
@@ -81,8 +81,8 @@ public class GameManager : MonoBehaviour
 
 		if(lives < 0){									//Are the lives less than 0? Are there no lives left?
 			gameOver = true;
-			paddle.active = false;						//Disables the paddle so it's invisible
-			ball.active = false;						//Disables the ball so it's invisible
+			paddle.SetActive(false);                    //Disables the paddle so it's invisible
+			ball.SetActive(false);                      //Disables the ball so it's invisible
 			gameUI.SetGameOver();						//Set the game over UI screen
 
 			for(int x = 0; x < bricks.Count; x++){		//Loops through the 'bricks' list
