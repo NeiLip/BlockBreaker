@@ -9,7 +9,7 @@ public class Paddle : MonoBehaviour
 	public bool canMove;			//Determins wether or not the paddle can move
 	public Rigidbody2D rig;			//The paddle's rigidbody 2D component
 
-	void Update ()
+	void FixedUpdate()
 	{
 		if(canMove){															//Is the paddle able to move?
 			if(Input.GetKey(KeyCode.LeftArrow)){								//Is the left arrow key currently being pressed

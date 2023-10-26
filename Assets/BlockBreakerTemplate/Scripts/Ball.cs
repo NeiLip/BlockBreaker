@@ -18,7 +18,7 @@ public class Ball : MonoBehaviour
 		StartCoroutine("ResetBallWaiter");		//Starts the 'ResetBallWaiter' coroutine to have the ball wait 1 second before moving
 	}
 
-	void Update ()
+	void FixedUpdate ()
 	{
 		rig.velocity = direction * speed * Time.deltaTime;			//Sets the object's rigidbody velocity to the direction multiplied by the speed
 
