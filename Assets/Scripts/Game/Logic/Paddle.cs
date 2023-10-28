@@ -47,5 +47,4 @@ namespace Game.Logic
 			transform.position = new Vector3(0, transform.position.y, 0);   //Sets the paddle's x position to 0
 		}
 	}
-
 }

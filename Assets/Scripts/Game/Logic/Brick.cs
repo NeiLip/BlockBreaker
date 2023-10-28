@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
 namespace Game.Logic
 {
 	public class Brick : MonoBehaviour

@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
-
-using UnityEngine.SceneManagement;
-
+using Core;
 using Game.Logic;
 
 namespace Game.UI
@@ -58,7 +55,7 @@ namespace Game.UI
 		//Called when the 'MENU' button is pressed
 		public void MenuButton()
 		{
-			SceneManager.LoadScene(0);  //Loads the 'Menu' scene
+			Tools.LoadScene(Constants.MENU_SCENE);
 		}
 	}
 }

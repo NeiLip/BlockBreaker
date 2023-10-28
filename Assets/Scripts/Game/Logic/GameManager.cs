@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
 using Game.UI;
 
 namespace Game.Logic
@@ -30,7 +29,7 @@ namespace Game.Logic
 
 		void Start()
 		{
-			StartGame(); //Starts the game by setting values and spawning bricks
+            StartGame(); //Starts the game by setting values and spawning bricks
 		}
 
 		//Called when the game starts
